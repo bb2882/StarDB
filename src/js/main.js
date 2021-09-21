@@ -1,5 +1,7 @@
 import HeaderLayout from "./modules/header/layout";
 
-const main = document.querySelector('.main');
-
-new HeaderLayout(main);
+export default class Main {
+    constructor() {
+        new HeaderLayout();
+    }
+}
