@@ -1,22 +1,19 @@
-class HeaderLayout {
+import HeaderLinks from "./header__links";
+
+export default class HeaderLayout {
     constructor(parent) {
         this.parent = parent;
 
         this.parent.innerHTML = this.render();
+        let header = document.querySelector('.header')
+        console.log(header)
+        new HeaderLinks(header)
     }
 
     render() {
         return `
             <div class="header">
-                <div class="header__links">
-                    <div class="header__link header__logo">StarDB</div>
-                    <div class="header__link">People</div>
-                    <div class="header__link">Planets</div>
-                    <div class="header__link">Starships</div>
-                </div>
             </div>
         `
     }
 }
-
-export default HeaderLayout;
