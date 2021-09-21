@@ -1,4 +1,5 @@
-import headerLayout from "./modules/header/layout";
+import HeaderLayout from "./modules/header/layout";
 
-const body = document.querySelector('body');
-headerLayout(body)
+const main = document.querySelector('.main');
+
+new HeaderLayout(main);
