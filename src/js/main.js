@@ -2,6 +2,7 @@ import HeaderLayout from "./modules/header/layout";
 
 export default class Main {
     constructor() {
-        new HeaderLayout();
+        this.main = document.querySelector('.main');
+        new HeaderLayout(this.main);
     }
 }

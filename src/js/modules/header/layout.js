@@ -1,8 +1,8 @@
 import HeaderLinks from "./header__links";
 
 export default class HeaderLayout {
-    constructor() {
-        this.parent = document.querySelector('.main');
+    constructor(parent) {
+        this.parent = parent;
 
         this.parent.innerHTML = this.render();
         let header = document.querySelector('.header')
