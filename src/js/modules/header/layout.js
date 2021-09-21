@@ -1,4 +1,4 @@
-import HeaderLinks from "./header__links";
+import HeaderLinks from "./links";
 
 export default class HeaderLayout {
     constructor(parent) {
@@ -12,6 +12,7 @@ export default class HeaderLayout {
     render() {
         return `
             <div class="header">
+                ${new HeaderLinks()}
             </div>
         `
     }

@@ -1,8 +1,6 @@
 export default class HeaderLinks {
-    constructor(parent) {
-        this.parent = parent;
-
-        this.parent.innerHTML = this.render();
+    constructor() {
+        this.render()
     }
 
     render() {
