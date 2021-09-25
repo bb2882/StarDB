@@ -1,6 +1,6 @@
 export default class HeaderLinks {
     constructor() {
-        this.render()
+
     }
 
     render() {

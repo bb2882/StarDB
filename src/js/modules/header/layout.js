@@ -5,14 +5,14 @@ export default class HeaderLayout {
         this.parent = parent;
 
         this.parent.innerHTML = this.render();
-        let header = document.querySelector('.header')
-        new HeaderLinks(header)
+        // let header = document.querySelector('.header')
+        // new HeaderLinks(header)
     }
 
     render() {
         return `
             <div class="header">
-                ${new HeaderLinks()}
+                ${new HeaderLinks().render()}
             </div>
         `
     }
