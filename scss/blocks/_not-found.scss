@@ -1,0 +1,10 @@
+.not-found {
+    &-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h1 {
+            color: #e53935
+        }
+    }
+}

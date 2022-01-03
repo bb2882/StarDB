@@ -1,0 +1,27 @@
+.planet {
+    display: flex;
+    padding: 10px;
+    &__img {
+        width: 150px;
+        height: 150px;
+        border-radius: 5%;
+    }
+    &__info {
+        flex-direction: column;
+        margin-left: 15px;
+        color: #fff;
+    }
+    &__name {
+        font-size: 30px;
+    }
+    &__data {
+        background-color: #303030;
+        margin-top: 18px;
+        display: flex;
+        flex-direction: column;
+        span {
+            padding: 7px;
+            border-bottom: 1px solid #222222;
+        }
+    }
+}
