@@ -8,9 +8,9 @@ export class Component {
     render() {
         this.el = document.querySelector(this.selector)
         if(!this.el) throw new Error(`Component with selector ${this.selector} wasn't found!`)
+
         this.el.innerHTML = compileTemplate(this.template, this.data)
     }
-
 }
 
 function compileTemplate(template, data) {

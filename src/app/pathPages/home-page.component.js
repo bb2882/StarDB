@@ -19,13 +19,17 @@ class HomePageComponent extends WFMComponent {
             .then(data => {
                 this.insertion(data, 1)
                 let i = 2
-                setInterval(() =>  {
-                    if ( i == data.results.length ) i = 1
+                let myInterval = setInterval(() =>  {
+                        if ( i == data.results.length ) i = 1
 
-                    this.insertion(data, i)
+                        if ( location.hash == '' ) {
+                            this.insertion(data, i)
+                        } else {
+                            clearInterval(myInterval)
+                        }
 
-                    i++
-                }, 5000)
+                        i++
+                }, 2000)
             });
     }
 
@@ -35,6 +39,7 @@ class HomePageComponent extends WFMComponent {
         this.data.rotation = data.results[i].rotation_period
         this.data.diameter = data.results[i].diameter
         this.data.src = `https://starwars-visualguide.com/assets/img/planets/${i+1}.jpg`
+        
         this.render()
     }
     
