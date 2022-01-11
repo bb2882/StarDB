@@ -40,35 +40,35 @@ body {
   color: #e53935;
 }
 
-.planet {
+.planets {
   display: flex;
   padding: 10px;
 }
 
-.planet__img {
+.planets__img {
   width: 150px;
   height: 150px;
   border-radius: 5%;
 }
 
-.planet__info {
+.planets__info {
   flex-direction: column;
   margin-left: 15px;
   color: #fff;
 }
 
-.planet__name {
+.planets__name {
   font-size: 30px;
 }
 
-.planet__data {
+.planets__data {
   background-color: #303030;
   margin-top: 18px;
   display: flex;
   flex-direction: column;
 }
 
-.planet__data span {
+.planets__data span {
   padding: 7px;
   border-bottom: 1px solid #222222;
 }
