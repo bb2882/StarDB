@@ -21,7 +21,6 @@ class HomePageComponent extends WFMComponent {
         http.get("https://swapi.dev/api/people/")
             .then(response => response.json())
             .then(data => {
-                console.log(data)
                 this.fill(data, this.data, 0)
                 this.addElements(data, this.data)
             });
@@ -52,7 +51,7 @@ class HomePageComponent extends WFMComponent {
         classData.gender = peopleData.results[i].gender
         classData.height = peopleData.results[i].height
         classData.mass = peopleData.results[i].mass
-        classData.birth = peopleData.results[i].birth
+        classData.birth = peopleData.results[i].birth_year
         classData.eye_color = peopleData.results[i].eye_color
         classData.hair_color = peopleData.results[i].hair_color
         classData.skin_color = peopleData.results[i].skin_color
