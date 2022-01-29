@@ -9,8 +9,8 @@ class AppComponent extends WFMComponent {
 export const appComponent = new AppComponent({
     selector: 'app-root',
     template: `
-        <header class="header"></header>
-        <planets class="planets"></planets>
+        <header class="header main"></header>
+        <planets class="planets main"></planets>
 
         <router-outlet class="router-outlet"></router-outlet>
         <not-found class="not-found"></not-found>

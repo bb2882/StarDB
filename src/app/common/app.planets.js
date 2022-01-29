@@ -18,21 +18,19 @@ class AppPlanets extends WFMComponent {
             .then(response => response.json())
             .then(data => {
                 let i = 2
-                setInterval(() =>  {console.log(i)}, 2000)
-                this.insertion(data, 1)
+                this.fill(data, 1)
 
                 setInterval(() =>  {
                         if ( i == data.results.length ) i = 1
 
-                        
-                            this.insertion(data, i)
+                        this.fill(data, i)
 
                         i++
                 }, 4000)
             });
     }
 
-    insertion(data, i) {
+    fill(data, i) {
         this.data.name = data.results[i].name
         this.data.population = data.results[i].population
         this.data.rotation = data.results[i].rotation_period
@@ -47,9 +45,9 @@ export const appPlanets = new AppPlanets({
     selector: 'planets',
     template: `
         <img class="planets__img" src='{{ src }}'>
-        <div class="planets__info">
-            <span class="planets__name">{{ name }}</span>
-            <div class="planets__data">
+        <div class="planets__info info">
+            <span class="planets__name name">{{ name }}</span>
+            <div class="planets__data data">
                 <span class="planets__population">Population: {{ population }}</span>
                 <span class="planets__rotation">Rotation Period: {{ rotation }}</span>
                 <span class="planets__diameter">Diameter: {{ diameter }}</span>

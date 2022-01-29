@@ -1,0 +1,26 @@
+.people {
+    &__names {
+        width: 48%;
+        background-color: #303030;
+        border-radius: 5px;
+    }
+
+    &__name {
+        color: #fff;
+        border-bottom: 1px solid #222222;
+        padding: 8px;
+        cursor: pointer;
+    }
+
+    &__img {
+        border-radius: 5%;
+        width: 255px;
+        height: 350px;
+    }
+
+    &__card {
+        display: flex;
+        margin-left: 4%;
+        width: 48%
+    }
+}
