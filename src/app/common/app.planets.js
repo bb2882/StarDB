@@ -46,7 +46,7 @@ export const appPlanets = new AppPlanets({
     template: `
         <img class="planets__img" src='{{ src }}'>
         <div class="planets__info info">
-            <span class="planets__name name">{{ name }}</span>
+            <span class="planets__name title">{{ name }}</span>
             <div class="planets__data data">
                 <span class="planets__population">Population: {{ population }}</span>
                 <span class="planets__rotation">Rotation Period: {{ rotation }}</span>

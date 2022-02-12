@@ -22,21 +22,27 @@ export class Module {
 
     renderRoute() {
         let url = window.location.hash.slice(1)
-        let route = this.routes.find(r => r.path === url)
+        let routes = []
+        routes.push(this.routes.filter(r => r.path === url))
+        // console.log(routes)
 
-        if (route == undefined) {
-            route = this.routes.find(r => r.path === '**')
+        if (routes === undefined) {
+            routes = this.routes.filter(r => r.path === '**')
         }
 
-        document.querySelector('router-outlet').innerHTML = `<${route.component.selector}></${route.component.selector}>`
-        this.renderComponent(route.component)
+        for(let i = 0; i < routes[0].length; i++) {
+            document.querySelector('router-outlet').innerHTML += `<${routes[0][i].component.selector}></${routes[0][i].component.selector}>`
+            this.renderComponent(routes[0][i].component)
+            // console.log(document.querySelector('router-outlet'))
+        }
+
     }
 
     renderComponent(c) {
         if (c.onInit != undefined) c.onInit()
 
         c.render()
-        
+
         if(c.afterInit != undefined) c.afterInit()
     }
     

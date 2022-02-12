@@ -1,6 +1,6 @@
-import { WFMComponent, http } from "../../framework";
+import { WFMComponent, http } from "../../../framework";
 
-class HomePageComponent extends WFMComponent {
+class HomePeopleComponent extends WFMComponent {
     constructor(config) {
         super(config)
 
@@ -33,9 +33,9 @@ class HomePageComponent extends WFMComponent {
 
             element.innerHTML = peopleData.results[i].name
 
-            element.classList.add('people__name')
+            element.classList.add('home-people__name')
 
-            document.querySelector('.people__names').append(element);
+            document.querySelector('.home-people__names').append(element);
 
             element.addEventListener('click', () => {
                 this.fill(peopleData, classData, i)
@@ -57,29 +57,29 @@ class HomePageComponent extends WFMComponent {
         classData.skin_color = peopleData.results[i].skin_color
 
         this.render()
-        
+
     }
 }
 
-export const homePageComponent = new HomePageComponent({
-    selector: 'home-page',
+export const homePageComponent = new HomePeopleComponent({
+    selector: 'home-people',
     template: `
-        <section class="people main">
-            <div class="people__names"></div>
+        <section class="home-people main">
+            <div class="home-people__names"></div>
 
-            <div class="people__card">
-                <img class="people__img" src="{{ src }}">
+            <div class="home-people__card">
+                <img class="home-people__img" src="{{ src }}">
 
-                <div class="people__info info">
-                    <span class="people__title name">{{ name }}</span>
-                    <div class="people__data data">
-                        <span class="people__gender">Gender: {{ gender }}</span>
-                        <span class="people__height">Height: {{ height }}</span>
-                        <span class="people__mass">Mass: {{ mass }}</span>
-                        <span class="people__birth">Birth: {{ birth }}</span>
-                        <span class="people__eye_color">Eye color: {{ eye_color }}</span>
-                        <span class="people__hair_color">Hair color: {{ hair_color }}</span>
-                        <span class="people__skin_color">Skin color: {{ skin_color }}</span>
+                <div class="home-people__info info">
+                    <span class="home-people__title title">{{ name }}</span>
+                    <div class="home-people__data data">
+                        <span class="home-people__gender">Gender: {{ gender }}</span>
+                        <span class="home-people__height">Height: {{ height }}</span>
+                        <span class="home-people__mass">Mass: {{ mass }}</span>
+                        <span class="home-people__birth">Birth: {{ birth }}</span>
+                        <span class="home-people__eye_color">Eye color: {{ eye_color }}</span>
+                        <span class="home-people__hair_color">Hair color: {{ hair_color }}</span>
+                        <span class="home-people__skin_color">Skin color: {{ skin_color }}</span>
                     </div>
                 </div>
 
