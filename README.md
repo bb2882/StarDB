@@ -1,6 +1,6 @@
 # StarDB - Star Wars Database
 
-![StarDB Logo](https://github.com/bb2882/StarDB/assets/70382872/5e964764-28e2-41de-8dbb-4e7eb71eabb8)
+![StarDB Logo](https://github.com/bb2882/StarDB/assets/70382872/8c65fc55-96ae-46f2-8f20-04d9c25d9c20)
 
 Welcome to StarDB, your one-stop Star Wars database based on the [SWAPI](https://swapi.dev/api) API. StarDB is an Object-Oriented Programming (OOP) JavaScript project that allows you to explore information about Star Wars planets and characters. The first section features a rotating display of planets, updating every 5 seconds. In the second section, you can find details about all the Star Wars characters, and clicking on anyone from the list opens their photo and additional data. Lastly, the third section mirrors the second section but focuses on planets instead of characters.
 
